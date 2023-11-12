@@ -1,0 +1,79 @@
+.container {
+	display: flex;
+	width: 100%;
+	height: 80vh;
+	position: relative;
+	overflow: hidden;
+	background: radial-gradient(
+		at top left,
+		rgb(86, 86, 86),
+		rgb(30, 30, 30),
+		rgb(21, 21, 21)
+	);
+
+	.left {
+		position: relative;
+		width: 40%;
+		background-color: rgb(228, 228, 228);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		// overflow-x: unset;
+		// overflow-y: hidden;
+		// overflow-x: visible;
+
+		.greeting {
+			z-index: 4;
+			.hello {
+				font-size: 2rem;
+				font-weight: 600;
+			}
+
+			.name {
+				font-size: 3rem;
+				font-weight: 800;
+				background: linear-gradient(to right, rgb(64, 64, 64), rgb(21, 21, 21));
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				letter-spacing: 6px;
+				text-transform: uppercase;
+			}
+
+			.role {
+				font-size: 1.3rem;
+				color: rgb(116, 116, 116);
+				font-weight: 600;
+				margin-top: 10px;
+			}
+		}
+		.divider {
+			position: absolute;
+			top: -40px;
+			z-index: 2;
+			// left: 40%;
+			right: -170px;
+			width: 160px;
+			height: 120%;
+			background-color: rgb(228, 228, 228);
+			transform: rotate(13deg);
+			transform-origin: top left;
+		}
+	}
+
+	.right {
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		align-items: center;
+
+		.image {
+			margin-left: 140px;
+			margin-bottom: 0px;
+			display: flex;
+			align-items: end;
+		}
+	}
+}

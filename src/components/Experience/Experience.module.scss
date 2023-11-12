@@ -1,0 +1,136 @@
+.container {
+	width: 100%;
+	min-height: 60vh;
+	display: flex;
+	flex-direction: column;
+	padding: 80px 0;
+	align-items: center;
+	.content {
+		width: 90%;
+		.heading {
+			//uppercase
+			font-size: 1.7rem;
+			width: 300px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 6px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: linear-gradient(to right, rgb(64, 64, 64), rgb(21, 21, 21));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			border: 3px solid;
+			border-image-slice: 1;
+			border-image-source: linear-gradient(
+				to right,
+				rgb(64, 64, 64),
+				rgb(21, 21, 21)
+			);
+		}
+		.experienceContainer {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: 30px;
+			.experience {
+				padding: 15px 0px;
+				border-top: 2px solid;
+				border-image-slice: 1;
+				border-image-source: linear-gradient(
+					to right,
+					rgb(64, 64, 64),
+					rgb(21, 21, 21)
+				);
+				width: 100%;
+
+				.preview {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					cursor: pointer;
+					color: rgb(35, 35, 35);
+					.company {
+						font-size: 1.6rem;
+						font-weight: 600;
+					}
+					.role {
+						font-size: 1.2rem;
+						font-weight: 600;
+					}
+					&:hover {
+						color: white;
+						background: linear-gradient(
+							to right,
+							rgb(64, 64, 64),
+							rgb(21, 21, 21)
+						);
+						padding: 10px;
+						transition: all 0.3s ease-in-out;
+						border-radius: 10px;
+					}
+				}
+
+				.previewActive {
+					border-radius: 10px 10px 0 0;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					cursor: pointer;
+					background: linear-gradient(
+						to right,
+						rgb(64, 64, 64),
+						rgb(21, 21, 21)
+					);
+					color: white;
+					padding: 15px;
+					.company {
+						font-size: 1.6rem;
+						font-weight: 600;
+					}
+					.role {
+						font-size: 1.2rem;
+						font-weight: 600;
+					}
+				}
+
+				.details {
+					transition: all 0.3s ease-in-out;
+					background: linear-gradient(
+						to right,
+						rgb(64, 64, 64),
+						rgb(21, 21, 21)
+					);
+					color: white;
+					border-radius: 0 0 10px 10px;
+
+					.duration {
+						display: flex;
+						gap: 10px;
+						align-items: center;
+						text-transform: uppercase;
+						margin-left: 15px;
+					}
+					.description > ul {
+						margin-bottom: 40px;
+						display: flex;
+						flex-direction: column;
+						gap: 10px;
+						text-align: justify;
+						margin-right: 40px;
+					}
+				}
+			}
+			&:last-child {
+				border-bottom: 2px solid;
+				border-image-slice: 1;
+				border-image-source: linear-gradient(
+					to right,
+					rgb(64, 64, 64),
+					rgb(21, 21, 21)
+				);
+			}
+		}
+	}
+}

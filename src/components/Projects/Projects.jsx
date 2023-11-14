@@ -73,7 +73,7 @@ function Projects() {
 							className={styles.project}
 							initial={{ marginRight: index % 2 === 0 ? "100vw" : "-100vw" }}
 							animate={{ opacity: 1 }}
-							transition={{ duration: 1 }}
+							transition={{ duration: 1, type: "spring", stiffness: 50 }}
 							whileInView={{ marginRight: 0 }}
 						>
 							<div className={styles.projectContent}>

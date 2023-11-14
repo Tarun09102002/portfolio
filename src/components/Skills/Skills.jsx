@@ -42,7 +42,13 @@ function Skills() {
 			<div className={styles.title}>Skills</div>
 			<div className={styles.marquee1}>
 				{skills.map((item, index) => (
-					<div key={index} className={styles.skill}>
+					<div
+						key={index}
+						className={styles.skill}
+						style={{
+							animationDelay: `${index * 0.7}s`,
+						}}
+					>
 						<img src={item.image} alt="" />
 					</div>
 				))}

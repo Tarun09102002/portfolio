@@ -14,7 +14,7 @@ function HomePage() {
 			</div>
 			<div className={styles.right}>
 				<div className={styles.image}>
-					<img src="tarun-photo.png" alt="Tarun Agrawal" />
+					<img src="tarun-photo-3.png" alt="Tarun Agrawal" />
 				</div>
 			</div>
 		</div>

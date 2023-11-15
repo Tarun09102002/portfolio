@@ -1,8 +1,12 @@
 import { useState } from "react";
 import styles from "./Experience.module.scss";
+import { useParams } from "react-router-dom";
 
 function Experience() {
 	const [activeIndex, setActiveIndex] = useState(null);
+	const tag = useParams().tag;
+
+	console.log(useParams());
 	const experience = [
 		{
 			company: "Deutsche Bank",
@@ -55,7 +59,7 @@ function Experience() {
 								<div
 									className={styles.details}
 									style={{
-										maxHeight: activeIndex === index ? "500px" : "0px",
+										maxHeight: activeIndex === index ? "1000px" : "0px",
 										transition: "max-height 0.5s ease-in-out",
 										overflow: "hidden",
 									}}

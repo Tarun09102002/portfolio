@@ -23,6 +23,7 @@ function Projects() {
 				},
 			],
 			imageOrientation: "portrait",
+			techStack: ["ReactJS", "NodeJS", "MongoDB", "SocketIO", "ExpressJS"],
 		},
 		{
 			name: "Calendar Application - Scheduler App",
@@ -38,6 +39,7 @@ function Projects() {
 				},
 			],
 			imageOrientation: "landscape",
+			techStack: ["ReactJS", "NodeJS", "MongoDB", "ExpressJS"],
 		},
 		{
 			name: "Automate: Rickshaw Pooling App",
@@ -53,6 +55,7 @@ function Projects() {
 				},
 			],
 			imageOrientation: "landscape",
+			techStack: ["ReactJS", "NodeJS", "MongoDB", "ExpressJS", "MapBox"],
 		},
 	];
 
@@ -82,6 +85,16 @@ function Projects() {
 								</h1>
 								<div className={styles.projectDescription}>
 									{project.description}
+								</div>
+								<div className={styles.projectDescription}>
+									<b
+										style={{
+											marginRight: "10px",
+										}}
+									>
+										Tech Stack:{" "}
+									</b>
+									{project.techStack.join(",  ")}
 								</div>
 								<div className={styles.links}>
 									{project.links.map((link) => (

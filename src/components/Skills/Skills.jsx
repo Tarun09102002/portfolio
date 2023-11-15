@@ -20,6 +20,10 @@ function Skills() {
 			image: "icons/skills/nestjs.svg",
 		},
 		{
+			name: "NextJS",
+			image: "icons/skills/nextjs.svg",
+		},
+		{
 			name: "NodeJS",
 			image: "icons/skills/nodejs.svg",
 		},
@@ -40,16 +44,11 @@ function Skills() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.title}>Skills</div>
-			<div className={styles.marquee1}>
+			<div className={styles.skillsContainer}>
 				{skills.map((item, index) => (
-					<div
-						key={index}
-						className={styles.skill}
-						style={{
-							animationDelay: `${index * 0.7}s`,
-						}}
-					>
+					<div key={index} className={styles.skill}>
 						<img src={item.image} alt="" />
+						<div className={styles.skillName}>{item.name}</div>
 					</div>
 				))}
 			</div>

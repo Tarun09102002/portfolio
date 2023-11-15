@@ -136,3 +136,40 @@
 		}
 	}
 }
+
+@media screen and (max-width: 600px) {
+	.heading {
+		font-size: 1.3rem !important;
+		width: 250px !important;
+	}
+	.preview {
+		flex-direction: column;
+		align-items: start;
+		text-align: left;
+		font-size: 1.2rem;
+	}
+	.company {
+		font-size: 1.3rem !important;
+		font-weight: 600;
+	}
+	.role {
+		font-size: 1rem !important;
+		font-weight: 600;
+	}
+	.previewActive {
+		flex-direction: column;
+		.company {
+			font-size: 1.3rem !important;
+			font-weight: 600;
+		}
+		.role {
+			font-size: 1rem !important;
+			font-weight: 600;
+		}
+	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

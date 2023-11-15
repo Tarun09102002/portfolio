@@ -136,8 +136,9 @@
 				z-index: -5;
 			}
 			img {
+				display: flex;
 				filter: blur(4px);
-				opacity: 0.6;
+				opacity: 0.5;
 				-webkit-filter: blur(4px);
 			}
 		}

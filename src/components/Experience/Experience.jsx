@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Experience.module.scss";
 import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Experience() {
 	const [activeIndex, setActiveIndex] = useState(null);
@@ -46,23 +47,30 @@ function Experience() {
 				<div className={styles.experienceContainer}>
 					{experience.map((exp, index) => (
 						<div className={styles.experience}>
-							<div
+							<motion.div
 								className={
 									activeIndex === index ? styles.previewActive : styles.preview
 								}
 								onClick={() => handleClick(index)}
+								whileHover={"hover"}
+								transition={{ duration: 1 }}
 							>
 								<div className={styles.company}>{exp.company}</div>
 								<div className={styles.role}>{exp.role}</div>
-							</div>
+							</motion.div>
 							{
-								<div
+								<motion.div
 									className={styles.details}
 									style={{
 										maxHeight: activeIndex === index ? "1000px" : "0px",
-										transition: "max-height 0.5s ease-in-out",
+										transition: "max-height 0.3s ease-in-out",
 										overflow: "hidden",
 									}}
+									// animate={{ opacity: 1 }}
+									// variants={menuVariants}
+									// initial="hidden"
+									// animate="visible"
+									// exit="hidden"
 								>
 									<div className={styles.duration}>
 										<div className={styles.month}>{exp.from}</div>-
@@ -75,7 +83,7 @@ function Experience() {
 											))}
 										</ul>
 									</div>
-								</div>
+								</motion.div>
 							}
 						</div>
 					))}

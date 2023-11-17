@@ -78,9 +78,13 @@ function HomePage() {
 					</div>
 				</motion.div>
 				<div className={styles.divider}></div>
-				<div className={styles.backgroundImage}>
-					<img src="background-homepage.jpg" className="" alt="" />
-				</div>
+				{/* <div className={styles.backgroundImage}> */}
+				<img
+					src="background-homepage.jpg"
+					className={styles.backgroundImage}
+					alt=""
+				/>
+				{/* </div> */}
 			</div>
 			<div className={styles.right}>
 				<motion.div

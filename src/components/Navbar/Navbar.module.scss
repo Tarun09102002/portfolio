@@ -2,6 +2,11 @@
 	color: rgb(116, 116, 116);
 	display: flex;
 	flex-direction: column;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	width: 100%;
+
 	.navbar {
 		background-color: rgb(30, 30, 30);
 		padding: 10px;
@@ -26,7 +31,20 @@
 				justify-content: center;
 				font-size: 1.3rem;
 				color: white;
+				transition: all 0.5s ease-in-out;
 			}
+			// .logoScroll {
+			// 	width: 50px;
+			// 	height: 50px;
+			// 	margin-right: 10px;
+			// 	border: 2px solid rgb(30, 30, 30);
+			// 	border-radius: 50%;
+			// 	display: flex;
+			// 	align-items: center;
+			// 	justify-content: center;
+			// 	font-size: 1.3rem;
+			// 	color: rgb(30, 30, 30);
+			// }
 			.logoText {
 				font-size: 1.3rem;
 				color: white;
@@ -68,7 +86,7 @@
 		}
 		.menuIcon {
 			width: 40px;
-			margin-right: 10px;
+			// margin-right: 10px;
 		}
 	}
 	.menuContainer {

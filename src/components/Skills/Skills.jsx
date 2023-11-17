@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Skills.module.scss";
+import { motion } from "framer-motion";
 
-function Skills() {
+function Skills({ skillsRef }) {
 	const skills = [
 		{
 			name: "AngularJS",
@@ -42,12 +43,27 @@ function Skills() {
 	];
 
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} ref={skillsRef}>
 			<div className={styles.title}>Skills</div>
 			<div className={styles.skillsContainer}>
 				{skills.map((item, index) => (
 					<div key={index} className={styles.skill}>
-						<img src={item.image} alt="" />
+						<motion.img
+							src={item.image}
+							alt=""
+							transition={{
+								duration: 0.4,
+								ease: "easeInOut",
+							}}
+							whileHover={{
+								scale: 1.1,
+								transition: {
+									duration: 0.4,
+									ease: "easeInOut",
+								},
+							}}
+							whileTap={{ scale: 0.9 }}
+						/>
 						<div className={styles.skillName}>{item.name}</div>
 					</div>
 				))}

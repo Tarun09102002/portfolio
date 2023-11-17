@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./Projects.module.scss";
 import { motion } from "framer-motion";
 
-function Projects() {
+function Projects({ projectsRef }) {
 	const projects = [
 		{
 			name: "Zoologram-Virtual Zoo",
@@ -60,7 +60,7 @@ function Projects() {
 	];
 
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} ref={projectsRef}>
 			<div
 				className={styles.content}
 				initial={{ marginRight: "100vw" }}
@@ -78,6 +78,7 @@ function Projects() {
 							animate={{ opacity: 1 }}
 							transition={{ duration: 1, type: "spring", stiffness: 50 }}
 							whileInView={{ marginRight: 0 }}
+							key={index}
 						>
 							<div className={styles.projectContent}>
 								<h1>
@@ -97,8 +98,8 @@ function Projects() {
 									{project.techStack.join(",  ")}
 								</div>
 								<div className={styles.links}>
-									{project.links.map((link) => (
-										<a href={link.link}>
+									{project.links.map((link, ind) => (
+										<a href={link.link} key={ind}>
 											<img src={link.image} alt={link.name} />
 										</a>
 									))}

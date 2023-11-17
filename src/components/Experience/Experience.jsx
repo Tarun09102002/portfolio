@@ -3,7 +3,7 @@ import styles from "./Experience.module.scss";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function Experience() {
+function Experience({ experienceRef }) {
 	const [activeIndex, setActiveIndex] = useState(null);
 	const tag = useParams().tag;
 
@@ -41,12 +41,12 @@ function Experience() {
 		}
 	};
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} ref={experienceRef}>
 			<div className={styles.content}>
 				<div className={styles.heading}>Experience</div>
 				<div className={styles.experienceContainer}>
 					{experience.map((exp, index) => (
-						<div className={styles.experience}>
+						<div className={styles.experience} key={index}>
 							<motion.div
 								className={
 									activeIndex === index ? styles.previewActive : styles.preview
@@ -78,8 +78,8 @@ function Experience() {
 									</div>
 									<div className={styles.description}>
 										<ul>
-											{exp.description.map((desc) => (
-												<li>{desc}</li>
+											{exp.description.map((desc, ind) => (
+												<li key={ind}>{desc}</li>
 											))}
 										</ul>
 									</div>

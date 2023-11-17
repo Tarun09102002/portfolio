@@ -3,12 +3,14 @@ import HomePage from "./components/Home/HomePage";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
+import Contact from "./components/Contact/Contact";
 import { useRef, useEffect } from "react";
 
 function App() {
 	const experienceRef = useRef(null);
 	const projectsRef = useRef(null);
 	const skillsRef = useRef(null);
+	const contactRef = useRef(null);
 
 	const scrollIntoView = (type) => {
 		switch (type) {
@@ -20,6 +22,9 @@ function App() {
 				break;
 			case "skills":
 				skillsRef.current.scrollIntoView({ behavior: "smooth" });
+				break;
+			case "contact":
+				contactRef.current.scrollIntoView({ behavior: "smooth" });
 				break;
 
 			default:
@@ -39,6 +44,7 @@ function App() {
 			<Experience experienceRef={experienceRef} />
 			<Projects projectsRef={projectsRef} />
 			<Skills skillsRef={skillsRef} />
+			<Contact contactRef={contactRef} />
 		</div>
 	);
 }

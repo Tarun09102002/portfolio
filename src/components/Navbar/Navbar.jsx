@@ -74,6 +74,9 @@ function Navbar({ scrollIntoView }) {
 						<a href="#skills" onClick={() => scrollIntoView("skills")}>
 							Skills
 						</a>
+						<a href="#contact" onClick={() => scrollIntoView("contact")}>
+							Contact
+						</a>
 					</div>
 				) : (
 					<motion.div
@@ -146,57 +149,60 @@ function Navbar({ scrollIntoView }) {
 								}}
 								exit={{ opacity: 0, y: -100 }}
 							>
-								{["Experience", "Projects", "Skills"].map((item, index) => (
-									<motion.div
-										className={styles.menuItem}
-										animate={
-											{
-												// rotate: 90,
+								{["Experience", "Projects", "Skills", "Contact"].map(
+									(item, index) => (
+										<motion.div
+											className={styles.menuItem}
+											animate={
+												{
+													// rotate: 90,
+												}
 											}
-										}
-										style={{
-											width: "90px",
-											height: window.screen.width < 600 ? "100px" : "200px",
-											display: "flex",
-											justifyContent: "center",
-											alignItems: "center",
-											zIndex: 100,
-										}}
-										transition={{
-											duration: 0.5,
-										}}
-										key={index}
-									>
-										<motion.a
-											href={`#${item.toLowerCase()}`}
-											onClick={() => {
-												scrollIntoView(item.toLowerCase());
-												setExpand(false);
-											}}
 											style={{
-												color: "white",
-												fontSize: window.screen.width < 600 ? "1rem" : "1.2rem",
-												textDecoration: "none",
-											}}
-											animate={{
-												rotate: 90,
+												width: "90px",
+												height: window.screen.width < 600 ? "100px" : "120px",
+												display: "flex",
+												justifyContent: "center",
+												alignItems: "center",
+												zIndex: 100,
 											}}
 											transition={{
 												duration: 0.5,
-												ease: "easeInOut",
 											}}
-											whileHover={{
-												scale: 1.1,
-												transition: {
-													duration: 0.4,
-													ease: "easeInOut",
-												},
-											}}
+											key={index}
 										>
-											{item}
-										</motion.a>
-									</motion.div>
-								))}
+											<motion.a
+												href={`#${item.toLowerCase()}`}
+												onClick={() => {
+													scrollIntoView(item.toLowerCase());
+													setExpand(false);
+												}}
+												style={{
+													color: "white",
+													fontSize:
+														window.screen.width < 600 ? "1rem" : "1.2rem",
+													textDecoration: "none",
+												}}
+												animate={{
+													rotate: 90,
+												}}
+												transition={{
+													duration: 0.5,
+													ease: "easeInOut",
+												}}
+												whileHover={{
+													scale: 1.1,
+													transition: {
+														duration: 0.4,
+														ease: "easeInOut",
+													},
+												}}
+											>
+												{item}
+											</motion.a>
+										</motion.div>
+									)
+								)}
 							</motion.div>
 						)}
 					</motion.div>
@@ -211,19 +217,21 @@ function Navbar({ scrollIntoView }) {
 						animate="visible"
 						exit="hidden"
 					>
-						{["Experience", "Projects", "Skills"].map((item, index) => (
-							<motion.div className={styles.menuItem} key={index}>
-								<a
-									href={`#${item.toLowerCase()}`}
-									onClick={() => {
-										scrollIntoView(item.toLowerCase());
-										setExpand(false);
-									}}
-								>
-									{item}
-								</a>
-							</motion.div>
-						))}
+						{["Experience", "Projects", "Skills", "Contact"].map(
+							(item, index) => (
+								<motion.div className={styles.menuItem} key={index}>
+									<a
+										href={`#${item.toLowerCase()}`}
+										onClick={() => {
+											scrollIntoView(item.toLowerCase());
+											setExpand(false);
+										}}
+									>
+										{item}
+									</a>
+								</motion.div>
+							)
+						)}
 					</motion.div>
 				</motion.div>
 			)}

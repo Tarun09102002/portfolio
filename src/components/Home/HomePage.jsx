@@ -65,9 +65,22 @@ function HomePage() {
 						))}
 					</motion.div>
 					<div className={styles.role}>Full Stack Web Developer</div>
+					<div className={styles.smlinks}>
+						<a href={"https://www.linkedin.com/in/tarun-agrawal-/"}>
+							<img src={"icons/linkedin.png"} alt="" />
+						</a>
+						<a href={"https://github.com/Tarun09102002"}>
+							<img src={"icons/github.png"} alt="" />
+						</a>
+						<a href={"https://www.instagram.com/_.tarunagrawal._"}>
+							<img src={"icons/instagram.png"} alt="" />
+						</a>
+					</div>
 				</motion.div>
-				<img src="background-homepage.jpg" className="backgroundImage" alt="" />
 				<div className={styles.divider}></div>
+				<div className={styles.backgroundImage}>
+					<img src="background-homepage.jpg" className="" alt="" />
+				</div>
 			</div>
 			<div className={styles.right}>
 				<motion.div
